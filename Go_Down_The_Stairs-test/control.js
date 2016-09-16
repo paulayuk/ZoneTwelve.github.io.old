@@ -324,11 +324,13 @@ $(function(){
 				lose();
 			}else {
 				$player.css("top", player_Y-80);
+				$player.css({"background-image":"url(player_n.png)"});
 			}
 		}else {
 			if(player_Y != 560+80){
+				$player.css({"background-image":"url(player_j.png)"});
 			$player.css("top", player_Y+80);
-				//繼續游完
+				//繼續遊完
 			}else{
 				//輸
 				clearInterval(call_xy);

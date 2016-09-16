@@ -39,7 +39,7 @@ a{
     /*background-color: chartreuse;*/
     background-image: url(player_n.png);
     background-size: cover;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
     transition-duration: 0s;
 }
 .player:hover{
