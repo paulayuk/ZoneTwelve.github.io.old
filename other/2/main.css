@@ -1,0 +1,16 @@
+body{
+	background-color:black;
+	display: inline;
+	position: absolute;
+	top:10vh;
+	left:20vw;
+	margin:auto;
+	/* */
+	text-align:center;
+	
+}
+canvas{
+	width:60vw;
+	height:80vh;
+	background-color:white;
+}

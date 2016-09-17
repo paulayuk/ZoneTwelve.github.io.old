@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+document.captureEvents(Event.KEYDOWN)
+document.onkeydown=function(event){
+	var keycode = "KC"+event.which;
+	//console.log(keycode)
+	switch (keycode) {
+		case "KC65":
+			console.log("A-"+keycode)
+			break;
+		case "KC83":
+			console.log("S-"+keycode)
+			break;
+		case "KC87":
+			console.log("W-"+keycode)
+			break;
+		case "KC68":
+			console.log("D-"+keycode)
+			break;
+	}
+	document.getElementById("demo").innerHTML = "Keycode is " + keycode;
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+body{
+	text-align:center;
+	margin:auto;
+}
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+#controlgame{
+}
+#moveright,#moveleft{
+	width:10vw;
+}
+#movedown,#moveup{
+	width:20vw;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js
+"></script>
+</head>
+<body onload="startGame()">
+<script>
+document.captureEvents(Event.KEYDOWN)
+document.onkeydown=function(event){
+	var keycode = "KC"+event.which;
+	//console.log(keycode)
+	switch (keycode) {
+		case "KC65":
+			console.log("A-"+keycode)
+			moveright()
+			break;
+		case "KC83":
+			console.log("S-"+keycode)
+			movedown();
+			break;
+		case "KC87":
+			console.log("W-"+keycode)
+			moveup()
+			break;
+		case "KC68":
+			console.log("D-"+keycode)
+			moveleft()
+	}
+	//document.getElementById("demo").innerHTML = "Keycode is " + keycode;
+}
+
+var myGamePiece;
+var time=0;
+function xy(){
+	//console.log(myGamePiece.x,myGamePiece.y)
+	document.getElementById("show").innerHTML="Time:"+time;
+	time++;
+}
+function startGame() {
+    myGamePiece = new component(30, 30, "red", 10, 120);
+    myGameArea.start();
+}
+
+var myGameArea = {
+    canvas : document.createElement("canvas"),
+    start : function() {
+        this.canvas.width = 480;
+        this.canvas.height = 270;
+        this.context = this.canvas.getContext("2d");
+        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+    },
+    clear : function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+}
+
+function component(width, height, color, x, y) {
+    this.width = width;
+    this.height = height;
+    this.x = x;
+    this.y = y;
+    this.update = function(){
+        ctx = myGameArea.context;
+        ctx.fillStyle = color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+    }
+}
+
+function updateGameArea() {
+    myGameArea.clear();
+    myGamePiece.x = 1;
+    myGamePiece.update();
+}
+
+
+function moveleft(){
+	if(myGamePiece.x+10 <=480-30){
+		myGameArea.clear();
+		myGamePiece.x += 10;
+		myGamePiece.update();
+	}
+}function moveright(){
+	if(myGamePiece.x-10 >=0){
+		myGameArea.clear();
+		myGamePiece.x -= 10;
+		myGamePiece.update();
+	}
+}function moveup(){
+	if(myGamePiece.y-10 >=0){
+    myGameArea.clear();
+    myGamePiece.y -= 10;
+    myGamePiece.update();
+	}
+}function movedown(){
+	if(myGamePiece.y+10 <=270-30){
+    myGameArea.clear();
+    myGamePiece.y += 10;
+    myGamePiece.update();
+	}
+}
+function startgame(){
+	setInterval(xy,1000);
+    myGameArea.clear();
+    myGamePiece.x = 50;
+    myGamePiece.y = 50;
+    myGamePiece.update();
+	document.getElementById("controlgame").innerHTML='<input id="moveup" type="button" onclick="moveup()" value="UP"></input><br/><input id="moveright" type="button" onclick="moveright()" value="Go Right"></input><input id="moveleft" type="button" onclick="moveleft()" value="Go Left"></input><br/><input id="movedown" type="button" onclick="movedown()" value="down"></input>'
+}
+function accelerate(n) {
+    myGameArea.clear();
+    myGamePiece.y -= n;
+    myGamePiece.update();
+}
+</script>
+<br/>
+<span id="controlgame">
+<input type="button" onclick="startgame()" value="Start" width="50vw"></input>
+</span>
+<p>The red square moves one pixel to the right, 50 times per second.<p id="show"></p></p>
+<br>
+<button style="font-size:5vw;" onmousedown="accelerate(5)" onmouseup="accelerate(5)">飛~~~~~~~~~~~~~~~</button>
+</body>
+</html>
+
