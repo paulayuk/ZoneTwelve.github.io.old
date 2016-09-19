@@ -15,6 +15,9 @@ canvas {
 p{
 	color:white;
 }
+a{
+	font-size:5vw;
+}
 #controlgame{
 }
 #moveright,#moveleft{
@@ -27,7 +30,7 @@ p{
 }
 </style>
 </head>
-<body onload="startGame()">
+<body>
 <script>
 var pw = 10,ph = 10,scx = 240 , scy =120;
 var pm = 5 ;
@@ -72,8 +75,8 @@ function xy(){
 	time++;
 }
 
-function startGame() {
-    myGamePiece = new component(pw, ph, "red", scx, scy);
+function startGame(colors) {
+    myGamePiece = new component(pw, ph, colors, scx, scy);
     myGameArea.start();
 }
 
@@ -148,14 +151,26 @@ function accelerate(n) {
 }
 
 
+function colorblue(){
+	startGame("blue");
+}function colorred(){
+	startGame("red");
+}function colorblack(){
+	startGame("black");
+}
 
+	startGame("black");
+}
 </script>
-<br/>
 <span id="controlgame">
 <input type="button" onclick="startgame()" value="Start" width="50vw"></input>
 </span><p id="coordinate"></p>
-<p>WASD可進行移動<br/>空白鍵可清除<br/>按Start可顯示<b>"進行時間"</b>與<b>"控制按鈕"</b><p id="show"></p></p>
-<br>
+<p>WASD可進行移動,空白鍵可清除<br/>按Start開始 || 換顏色會清除版面<p id="show"></p></p>
+<p>
+<a href="javascript:colorblue()" style="color:blue;"
+>Blue</a><a href="javascript:colorred()" style="color:red;"
+>red</a><a href="javascript:colorblack()" style="background-color:white;color:black;"
+>black</a></p>
 <button style="font-size:5vw;" onmousedown="accelerate(5)" onmouseup="accelerate(5)">飛~~~~~~~~~~~~~~~~~<br/>飛會把你的東東變不見喔</button>
 </body>
 </html>
