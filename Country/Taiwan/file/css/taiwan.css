@@ -1,0 +1,168 @@
+body{
+  margin: auto;
+  text-align: center;
+}#TaiwanRed{
+  background-color: red;
+  width: 90vw;/* 3:2 */
+  height: 60vw;
+}#TaiwanBlue{
+  background-color: blue;
+  width: 45vw; /* 3:2 */
+  height: 30vw;
+}#WhiteCircular{
+  background-color: white;
+  position: relative;
+  left: 16.25vw; /* 3:2     1/6  1/4 */
+  top: 8.75vw;
+  width: 12.5vw;
+  height: 12.5vw;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+#triangle12{
+  position: absolute;
+  top:2.25vw;
+  left: 15.5vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 1.875vw 7vw 1.875vw;
+  border-color: transparent transparent white transparent;
+  /* Rotate div */
+  -ms-transform: rotate(-30deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+  transform: rotate(-30deg);/*Opera 40支援*/
+}
+#triangle1{
+  position: absolute;
+  top:1vw;
+  left: 20.5vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 1.875vw 7vw 1.875vw;
+  border-color: transparent transparent white transparent;
+  /* Rotate div */
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);/*Opera 40支援*/
+}#triangle2{
+  position: absolute;
+  top:2.45vw;
+  left: 25.75vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 1.875vw 7vw 1.875vw;
+  border-color: transparent transparent white transparent;
+  /* Rotate div */
+  -ms-transform: rotate(30deg); /* IE 9 */
+  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+  transform: rotate(30deg);/*Opera 40支援*/
+}#triangle3{
+  position: absolute;
+  top: 7.75vw;
+  left:28vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.875vw 0 1.875vw 7vw;
+  border-color: transparent transparent transparent white;
+  /* Rotate div */
+  -ms-transform: rotate(-30deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+  transform: rotate(-30deg);/*Opera 40支援*/
+}#triangle4{
+  position: absolute;
+  top:13.125vw;
+  left:29.625vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.875vw 0 1.875vw 7vw;
+  border-color: transparent transparent transparent white;
+}#triangle5{
+  position: absolute;
+  top:18.5vw;
+  left:28.25vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.875vw 0 1.875vw 7vw;
+  border-color: transparent transparent transparent white;
+  /* Rotate div */
+  -ms-transform: rotate(30deg); /* IE 9 */
+  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+  transform: rotate(30deg);/*Opera 40支援*/
+}#triangle6{
+  position: absolute;
+  top:20.5vw;
+  left:26.25vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7vw 1.875vw 0 1.875vw;
+  border-color: white transparent transparent transparent;
+  /* Rotate div */
+  -ms-transform: rotate(-30deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+  transform: rotate(-30deg);/*Opera 40支援*/
+}#triangle7{
+  position: absolute;
+  top:22vw;
+  left: 21vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7vw 1.875vw 0 1.875vw;
+  border-color: white transparent transparent transparent;
+}#triangle8{
+  position: absolute;
+  top:20.5vw;
+  left:15.5vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7vw 1.875vw 0 1.875vw;
+  border-color: white transparent transparent transparent;
+  /* Rotate div */
+  -ms-transform: rotate(30deg); /* IE 9 */
+  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+  transform: rotate(30deg);/*Opera 40支援*/
+}#triangle9{
+  position: absolute;
+  top:18.5vw;
+  left:10vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.875vw 7vw 1.875vw 0;
+  border-color: transparent white transparent transparent;
+  /* Rotate div */
+  -ms-transform: rotate(-30deg); /* IE 9 */
+  -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+  transform: rotate(-30deg);/*Opera 40支援*/
+}#triangle10{
+  position: absolute;
+  top:13.125vw;
+  left:8.475vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.875vw 7vw 1.875vw 0;
+  border-color: transparent white transparent transparent;
+}#triangle11{
+  position: absolute;
+  top:7.75vw;
+  left:10vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1.875vw 7vw 1.875vw 0;
+  border-color: transparent white transparent transparent;
+  /* Rotate div */
+  -ms-transform: rotate(30deg); /* IE 9 */
+  -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+  transform: rotate(30deg);/*Opera 40支援*/
+}
