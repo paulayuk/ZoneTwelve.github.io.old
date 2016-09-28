@@ -1,0 +1,37 @@
+body{
+	
+}#startbutton{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	font-size:5vw;
+}#Player{
+	background-color:blue;
+	position:relative;
+}#moveleft{
+	position:fixed;
+	width:50vw;
+	height:20px;
+	bottom:20px;
+	left:0vw;
+}#moveright{
+	position:fixed;
+	width:50vw;
+	height:20px;
+	bottom:20px;
+	left:50vw;
+}#moveup{
+	position:fixed;
+	width:100vw;
+	height:20px;
+	bottom:40px;
+	left:0vw;
+}#movedown{
+	position:fixed;
+	width:100vw;
+	height:20px;
+	bottom:0vh;
+	left:0vw;
+}
