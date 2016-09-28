@@ -32,7 +32,6 @@ body{
   border-radius: 100%;
 }#CR-img{
   position: relative;
-  top:2vh;
-  width: 30vh;
-  height: auto;
+  left:-1vh;
+  width:34vh;
 }
