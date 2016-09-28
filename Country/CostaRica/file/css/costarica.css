@@ -1,0 +1,38 @@
+body{
+  margin:0 auto;
+  text-align: center;
+}
+
+/* Costa Rica  */
+#CostaRicaBlue{
+  width:auto;
+  height: 100vh;
+  background-color: #000093;
+}#CosTaRicaWhite{
+  position: relative;
+  top: 15vh;
+  width:auto;
+  height: 70vh;
+  background-color: #FFFFFF;
+}#CostaRicaRed{
+  position: relative;
+  top: 15vh;
+  width:auto;
+  height: 40vh;
+  background-color: #CE0000;
+}#WhiteCircular{
+  position: absolute;
+  left:20vw;
+  top:1vh;
+  width: 32vh;
+  height: 38vh;
+  background-color: white;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}#CR-img{
+  position: relative;
+  top:2vh;
+  width: 30vh;
+  height: auto;
+}
