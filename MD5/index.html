@@ -1,0 +1,18 @@
+﻿<meta name="viewport" content="user-scalable=no">
+<script src="./md5.js"></script>
+<script>
+function pwdToMD5(){
+	document.getElementById("test").value = hex_md5(document.getElementById("password").value);
+}
+</script>
+<style>
+input{
+	font-size:10vw;
+	width:100%;
+}
+
+</style>
+<input id="password" placeholder="明文密碼"/>
+<input id="test" placeholder="密文>MD5"/>
+<input type="button" value="Do it" onclick="pwdToMD5()"/>
+<a href="http://pajhome.org.uk/crypt/md5/md5.html"></a>
