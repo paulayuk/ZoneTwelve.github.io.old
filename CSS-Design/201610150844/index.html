@@ -1,0 +1,62 @@
+<style>
+body{
+	overflow-y:hidden;
+}
+#base{
+	position:absolute;
+	top:0;
+	left:0;
+}#background01,#background02{
+	position:relative;
+	top:0;
+	width:50vw;
+	height:100vh;
+}#background01{
+	float:left;
+	background:linear-gradient(#00E3E3 ,#009393);
+	background: -webkit-linear-gradient(#00E3E3 ,#009393);
+	background: -o-linear-gradient(#00E3E3 ,#009393);
+	background: -moz-linear-gradient(#00E3E3 ,#009393);
+}#background02{
+	float:right;
+	background: linear-gradient(#FFFF6F,#00E3E3);
+	background: -webkit-linear-gradient(#FFFF6F,#00E3E3);
+	background: -o-linear-gradient(#FFFF6F,#00E3E3);
+	background: -moz-linear-gradient(#FFFF6F,#00E3E3);
+}#button1:hover,#button2:hover{
+	box-shadow: 0 0 5px #888888;
+	margin-top:-40px;
+}#button1,#button2{
+	line-height:100px;
+	color:#00E3E3;
+	font-size:200%;
+	font-weight:10;
+	font-family:sans-serif;
+	position:relative;
+	top:50%;
+	margin:auto;
+	text-align:center;
+	margin-top:-50px;
+	width:100px;
+	height:100px;
+	border:5px solid #E6E6E6;
+	border-radius:50%;
+	box-shadow: 0 10px 5px #888888;
+	background: linear-gradient(#FFF ,#E0E0E0);
+	transition-duration: 0.5s;
+}#button2{
+	background: linear-gradient(#E0E0E0 ,#FFF);
+}
+</style>
+<div id="base">
+	<div id="background01">
+		<div id="button1">OK</div>
+	</div>
+	<div id="background02">
+		<div id="button2">GO</div>
+	</div>	
+</div>
+<!--
+<a href="https://zonetwelvecodingsecurity.wordpress.com/">ZoneTwelve完工w</a>
+<a href="https://medium.com/@citysite1025/寫給不是設計師的-漸層配色-上-b1f9771dd803#.5ffgbdy9v">靈感來源</a>
+-->
