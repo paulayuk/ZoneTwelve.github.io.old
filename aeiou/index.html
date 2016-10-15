@@ -1,0 +1,93 @@
+﻿<style>
+*{
+	font-size:6vw;
+}
+#base{
+	position:absolute;
+	top:0;
+	left:0;
+}textarea{
+	width:50vw;
+	height:80vh;
+}#text{
+	position:fixed;
+	top:0;
+	left:0;
+}#encode{
+	position:fixed;
+	top:0;
+	right:0;
+}input{
+	width:25vw;
+	height:20vh;
+}#en{
+	position:fixed;
+	left:0;
+	bottom:0;
+}#de{
+	position:fixed;
+	right:0;
+	bottom:0;
+}#clear{
+	width:50vw;
+	position:fixed;
+	left:25%;
+	bottom:0;
+}
+</style>
+<script>
+function decode(){
+	var text = document.getElementById("encode").value;
+	text = text.replace(/1/g,'a')
+	text = text.replace(/2/g,'e')
+	text = text.replace(/3/g,'i')
+	text = text.replace(/4/g,'o')
+	text = text.replace(/5/g,'u')
+	document.getElementById("text").value = text;
+}
+function encode(){
+	var text = document.getElementById("text").value;
+	text = text.replace(/a/gi,'1')
+	text = text.replace(/e/gi,'2')
+	text = text.replace(/i/gi,'3')
+	text = text.replace(/o/gi,'4')
+	text = text.replace(/u/gi,'5')
+	document.getElementById("encode").value = text;
+
+
+/*
+	var text = document.getElementById("text").value;
+	var code = /a|e|i|o|u/;
+	
+	var enCode = [];
+	for(var i=0;i<=text.length;i++){
+		if(code.test(text[i])){
+			console.log('true')
+			switch(text[i]){
+				case 'a':enCode.push('1');break;
+				case 'e':enCode.push('2');break;
+				case 'i':enCode.push('3');break;
+				case 'o':enCode.push('4');break;
+				case 'u':enCode.push('5');break;
+			}
+		}else{
+			console.log('false')
+			enCode.push(text[i])
+		}
+	}
+	console.log(enCode)
+	document.getElementById("encode").value = enCode;
+	/* */
+}
+</script>
+<div id="base">
+<form>
+<textarea id="text"></textarea>
+<textarea id="encode"></textarea>
+<input id="clear" type="reset">
+</form>
+
+<input id="en" type="button" onclick="encode()" value="文字轉換"/>
+<input id="de" type="button" onclick="decode()" value="密文轉換"/>
+
+</div>
