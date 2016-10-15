@@ -16,14 +16,13 @@ function start(){
 
 	/* 人物移動 */
 	//若要添加邊界可從此修改
-var WindowsWidth = window.innerWidth,WindowsHeight = window.innerHeight;
 function MoveLeft(){
 	if (x>=0){
 		document.getElementById("Player").style.left=x-10;
 		x-=10;
 	}
 }function MoveRight(){
-	if (x+20+PlayerWidth<=WindowsWidth){
+	if (x+20+PlayerWidth<=window.innerWidth){
 		document.getElementById("Player").style.left=x+10;
 		x+=10;
 	}
@@ -33,7 +32,7 @@ function MoveLeft(){
 		y-=10;
 	}
 }function MoveDown(){
-	if(y+70+PlayerHeight<=WindowsHeight){
+	if(y+70+PlayerHeight<=window.innerHeight){
 		document.getElementById("Player").style.top=y+10;
 		y+=10;	
 	}
