@@ -22,7 +22,7 @@ body{
 	-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 	height:0;
-	font-size:6vw;	
+	font-size:4vw;	
 	color:#1AFD9C;
 	border:none;
 	border-style:none;
@@ -33,7 +33,7 @@ body{
 	border-bottom-right-radius:20px 80%;
 }.menulink:hover{
 	background-color:#4F4F4F;
-	font-size:4rem;
+	font-size:6vw;
 	height:auto;
 	border-style:dashed;
 }#content{
