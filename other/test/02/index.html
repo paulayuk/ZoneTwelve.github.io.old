@@ -7,24 +7,22 @@ body{
 	top:0;
 	left:0;
 }#background01,#background02{
-	position:absolute;
+	position:relative;
 	top:0;
 	width:50vw;
 	height:100vh;
 }#background01{
-	left:0;
 	float:left;
 	background:linear-gradient(#00E3E3 ,#009393);
 	background: -webkit-linear-gradient(#00E3E3 ,#009393);
 	background: -o-linear-gradient(#00E3E3 ,#009393);
 	background: -moz-linear-gradient(#00E3E3 ,#009393);
 }#background02{
-	left:50vw;
 	float:right;
-	background: linear-gradient(#FFFF6F,#00E3E3);
-	background: -webkit-linear-gradient(#FFFF6F,#00E3E3);
-	background: -o-linear-gradient(#FFFF6F,#00E3E3);
-	background: -moz-linear-gradient(#FFFF6F,#00E3E3);
+	background: linear-gradient(to bottom right,#FFFF6F,#00E3E3);
+	background: -webkit-linear-gradient(to bottom right,#FFFF6F,#00E3E3);
+	background: -o-linear-gradient(to bottom right,#FFFF6F,#00E3E3);
+	background: -moz-linear-gradient(to bottom left,#FFFF6F,#00E3E3);
 }.buttonStyle1:hover,.buttonStyle2:active{
 	box-shadow: 0 0 5px #888888;
 	margin-top:-40px;
@@ -50,13 +48,9 @@ body{
 	background: linear-gradient(#E0E0E0 ,#FFF);
 }.buttonStyle2{
 	background: linear-gradient(#E0E0E0 ,#FFF);
-}h1{
-	position:relative;
-	z-index:5;
 }
 </style>
 <div id="base">
-	<h1>ZoneTwelve</h1>
 	<div id="background01">
 		<div id="button1" class="buttonStyle1">OK</div>
 	</div>
