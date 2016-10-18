@@ -44,20 +44,32 @@
 <script>
 function decode(){
 	var text = document.getElementById("encode").value;
-	text = text.replace(/1/g,'a')
-	text = text.replace(/2/g,'e')
-	text = text.replace(/3/g,'i')
-	text = text.replace(/4/g,'o')
-	text = text.replace(/5/g,'u')
+	var alphabet = ["a","e","i","o","u"];
+	for(var i=0;i<alphabet.length;i++){
+		eval("text = text.replace(/"+(i+1)+"/g,'"+alphabet[i]+"')")
+	}
+	/*
+		text = text.replace(/1/g,'a')
+		text = text.replace(/2/g,'e')
+		text = text.replace(/3/g,'i')
+		text = text.replace(/4/g,'o')
+		text = text.replace(/5/g,'u')
+	/* */
 	document.getElementById("text").value = text;
 }
 function encode(){
 	var text = document.getElementById("text").value;
-	text = text.replace(/a/gi,'1')
-	text = text.replace(/e/gi,'2')
-	text = text.replace(/i/gi,'3')
-	text = text.replace(/o/gi,'4')
-	text = text.replace(/u/gi,'5')
+		var alphabet = ["a","e","i","o","u"];
+		for(var i=0;i<alphabet.length;i++){
+		eval("text = text.replace(/"+alphabet[i]+"/g,'"+(i+1)+"')")
+	}
+	/*
+		text = text.replace(/a/gi,'1')
+		text = text.replace(/e/gi,'2')
+		text = text.replace(/i/gi,'3')
+		text = text.replace(/o/gi,'4')
+		text = text.replace(/u/gi,'5')
+	/* */
 	document.getElementById("encode").value = text;
 
 
