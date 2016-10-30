@@ -1,0 +1,20 @@
+body,table{
+	margin:auto;
+	text-align:center;
+	//background-image: url("bg.jpg");
+	background-size:cover;
+}
+table{
+	background-color:black;
+	color:white;
+}tr,td{
+	width:10vw;
+	height:20vh;
+	margin:auto;
+	text-align:center;
+    border-width:5px;	
+    border-style:ridge;
+	margin:0;
+	padding:25;
+	font-size:5vw;
+}
