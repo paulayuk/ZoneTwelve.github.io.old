@@ -28,6 +28,6 @@ td:hover{
     border-color: yellow;
 }a{
 	position:absolute;
-	top:0;
+	top:10;
 	right:10;
 }
