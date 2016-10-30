@@ -8,6 +8,7 @@ table{
 	background-color:black;
 	color:white;
 }tr,td{
+    cursor: pointer
 	width:10vw;
 	height:20vh;
 	margin:auto;
@@ -18,7 +19,6 @@ table{
 	padding:25;
 	font-size:5vw;
 }td{
-    cursor: pointer
 }
 td:hover{
     border-color: yellow;
