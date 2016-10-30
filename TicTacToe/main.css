@@ -17,4 +17,9 @@ table{
 	margin:0;
 	padding:25;
 	font-size:5vw;
+}td{
+    cursor: pointer
+}
+td:hover{
+    border-color: yellow;
 }
