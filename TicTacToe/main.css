@@ -18,6 +18,10 @@ table{
 	padding:25;
 	font-size:5vw;
 }tr{
+	transition-duration: 1s;
+	-moz-transition-duration: 1s; /* Firefox 4 */
+	-webkit-transition-duration: 1s; /* Safari 和 Chrome */
+	-o-transition-duration: 1s; /* Opera */
 	cursor: pointer;
 }
 td:hover{
