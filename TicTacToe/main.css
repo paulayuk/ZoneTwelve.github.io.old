@@ -26,4 +26,8 @@ table{
 }
 td:hover{
     border-color: yellow;
+}a{
+	position:absolute;
+	top:0;
+	right:10;
 }
