@@ -33,7 +33,10 @@ function change(id,player){
 	}
 	console.log("Ｏ",playerO,"	|	Ｘ",playerX)
 	if(click<10)document.getElementById("title").innerHTML="換"+player+"選手";
-	if(click==9)document.getElementById("title").innerHTML="遊戲結束｜平手";
+	if(click==9){
+		document.getElementById("title").innerHTML="遊戲結束｜平手";
+		document.title= '~平手~';
+	}
 }
 var winningConditions=[//贏的條件
 		['1','2','3'],
@@ -55,6 +58,8 @@ function check(playerSteps){
 							if(playerSteps[i]==winningConditions[win][2]){
 								document.getElementById("win").innerHTML="Player	"+player+"	Won";
 								click=10;
+								document.title="Player	"+player+"	Won";
+								return;
 							}
 						}
 					}
