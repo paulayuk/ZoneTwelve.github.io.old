@@ -59,6 +59,9 @@ function check(playerSteps){
 								document.getElementById("win").innerHTML="Player	"+player+"	Won";
 								click=10;
 								document.title="Player	"+player+"	Won";
+								document.getElementById(winningConditions[win][0]).style.backgroundColor="red";
+								document.getElementById(winningConditions[win][1]).style.backgroundColor="red";
+								document.getElementById(winningConditions[win][2]).style.backgroundColor="red";
 								return;
 							}
 						}
