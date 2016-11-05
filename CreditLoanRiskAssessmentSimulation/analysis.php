@@ -16,7 +16,7 @@ $obj=json_decode($json);
 echo "產生模擬貸款資料URI：<b>$link </b>";
 echo "<p>前五筆超過瘋顯門檻值之貸款資料：</p>";
 echo '<table>';
-echo '<table><tr><td>編號</td><td>年齡</td><td>收入</td><td>資產</td><td>負債</td><td>貸款金額</td></tr>';
+echo '<table><tr><td>編號</td><td>年齡</td><td>收入</td><td>資產</td><td>負債</td><td>貸款金額</td><td>風險值</td></tr>';
 foreach($obj as $data){
 	$age = (int)$data->age;
 	$income = (int)$data->income;
@@ -26,6 +26,7 @@ foreach($obj as $data){
 	//$danger=(50*$age)/75;
 	$danger = (50*(int)$age)/75-(50*(int)$income)/8000-(60*((int)$assets-(int)$liabilities))/60000+(40*(int)$loan)/50000;
 	if(floor($danger)>=$baseline&&$maxData>$i){
+		$danger=floor($danger);
 		echo '<tr>';
 		echo "<td>$data->id </td>";
 		echo "<td>$data->age </td>";
@@ -33,6 +34,7 @@ foreach($obj as $data){
 		echo "<td>$data->assets </td>";
 		echo "<td>$data->liabilities </td>";
 		echo "<td>$data->loan </td>";
+		echo "<td>$danger </td>";
 		echo '</tr>';
 		//echo floor($danger).'<br/>';		
 		$i++;
