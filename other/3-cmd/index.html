@@ -106,8 +106,6 @@
 				document.getElementById("content").innerHTML=document.getElementById("content").innerHTML.replace(/ id=\"type\"/g,'').replace(/_/,"")+"<br/>'"+typeing.join("")+"' 不是內部或外部命令、可執行的程式或批次檔。<br/><br/>C:\><b id='type'></b>";
 				typeing=[];
 			}
-				function quit(){window.close();}
-				function thisjk(){document.getElementById("content").innerHTML="C:\><b id='type'></b><br/><h1>騙你的XD</h1>";setTimeout(quit,1000)}
 		}
 		if(event.keyCode==8&&typeing.length>0)
 			typeing=typeing.join("").slice(0,typeing.join("").length-1).split("");
@@ -126,6 +124,8 @@
 		setTimeout(type1,1000);
 	}
 	window.onload=function(){type1();}
+	function quit(){window.close();}
+	function thisjk(){document.getElementById("content").innerHTML="C:\><b id='type'></b><br/><h1>騙你的XD</h1>";setTimeout(quit,1000)}
 	</script>
 </head>
 <body>
