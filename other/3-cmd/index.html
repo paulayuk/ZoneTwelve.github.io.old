@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	body{
+		background-image: url("http://www.prophethacker.com/wp-content/uploads/2016/04/Hacker-silhouette.jpg");
+	}
+	.frame{
+		word-wrap: break-word; 
+		word-break:break-all;
+		//word-break: normal;
+		cursor:default;
+		width:600px;
+		height:435px;
+		margin:auto;
+		text-align:center;
+		border-radius:5px;
+		box-shadow:5px 5px 10px #9D9D9D;
+		background-color:#46A3FF;
+	}.screen{
+		position:relative;
+		top:5px;
+		left:-2.5px;
+		overflow: scroll;
+		width:580px;
+		height:400px;
+		//overflow-x:scroll;
+		margin:0 auto;
+		text-align:left;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		background-color:black;
+	}#content{
+		position:relative;
+		left:5px;
+		color:#00BB00;
+		font-family:serif;
+	}.exit{
+		float:right;
+		width:50px;
+		background-color:#FF0000;
+	}.exit:hover{
+		background-color:#FF5151;
+	}.enlarge{
+		float:right;
+		width:50px;
+	}.narrow{
+		height:auto;
+		float:right;
+		width:50px;
+	}.narrow:hover,.enlarge:hover{
+		background-color:#84C1FF;
+	}.features{
+		height:20px;
+		float:right;
+		text-align:right;
+	}#title{
+		position:relative;
+		top:-5px;
+		left:-5px;
+	}#titleLogo{
+		position:relative;
+		top:5px;
+		left:-5px;
+		width:30px;
+	}.AutoNewline{
+		text-align:left;
+		word-break: break-all;
+		display:none;
+	}	
+	</style>
+	<script type="text/javascript">
+	var str="abcdefghijklmnopqrstuvwxyz";
+	var key=str.split("");
+	var typeing=[];
+	document.onkeydown = function(){
+		var keycode = event.which || event.keyCode;
+		console.log(event.keyCode);
+		if(event.keyCode==32)typeing.push("　");
+		if(event.keyCode==13){
+			switch(typeing.join("")){
+				case "cmd":
+				document.getElementById("content").innerHTML="ZoneTwelve Windows CMD Simulator [版本 16.11.1035]<br/>(c) 2016 ZoneTwelve Corporation.  All rights reserved.<br/><br/>C:\\><b id='type'></b>";
+				typeing=[];
+				break;
+				case "":
+				document.getElementById("content").innerHTML=document.getElementById("content").innerHTML.replace(/ id=\"type\"/g,'').replace(/_/,"")+"<br/>C:\><b id='type'></b>";
+				break;
+				case "cls":
+				typeing=[];
+				document.getElementById("content").innerHTML="C:\\><b id='type'></b>";
+				break;
+				case "exit":
+				document.getElementById("content").innerHTML=document.getElementById("content").innerHTML.replace(/ id=\"type\"/g,'').replace(/_/,"")+"<br/>不可退出 (o wo)<br/><br/>C:\\><b id='type'></b>";
+				setTimeout(thisjk,2000);
+				typeing=[];
+				break;
+				case "help":
+				document.getElementById("content").innerHTML=document.getElementById("content").innerHTML.replace(/ id=\"type\"/g,'').replace(/_/,"")+"<br/>關於 Javascript命令提示字元 - ZoneTwelve<br/>開發者很帥,要不要跟他交往 (o wo)<br/><br/>C:\\><b id='type'></b>";
+				typeing=[];
+				break;
+				default:
+				document.getElementById("content").innerHTML=document.getElementById("content").innerHTML.replace(/ id=\"type\"/g,'').replace(/_/,"")+"<br/>'"+typeing.join("")+"' 不是內部或外部命令、可執行的程式或批次檔。<br/><br/>C:\><b id='type'></b>";
+				typeing=[];
+			}
+				function quit(){window.close();}
+				function thisjk(){document.getElementById("content").innerHTML="C:\><b id='type'></b><br/><h1>騙你的XD</h1>";setTimeout(quit,1000)}
+		}
+		if(event.keyCode==8&&typeing.length>0)
+			typeing=typeing.join("").slice(0,typeing.join("").length-1).split("");
+		if((event.keyCode-65)<=26&&(event.keyCode-65)>=0)
+			typeing.push(key[event.keyCode-65]);
+		document.getElementById("type").innerHTML=typeing.join("")+now
+	}
+	var now="";
+	function type1(){
+		now="_";
+		document.getElementById("type").innerHTML=typeing.join("")+now
+		setTimeout(type2,1000);
+	}function type2(){
+		now="　";
+		document.getElementById("type").innerHTML=typeing.join("")+now
+		setTimeout(type1,1000);
+	}
+	window.onload=function(){type1();}
+	</script>
+</head>
+<body>
+	<div class="frame">
+		<img id="titleLogo" src="https://upload.wikimedia.org/wikipedia/en/e/ef/Command_prompt_icon_%28windows%29.png"/>
+		<b id="title">系統管理員:C:\Windows\System32/Javascript_cmd.exe</b>
+		<div class="features">
+			<div class="exit">　✕　</div>
+			<div class="enlarge">　□ 　</div>
+			<div class="narrow">　– 　</div>
+		</div>
+		<div class="screen">
+			<b><p id="content">ZoneTwelve Windows CMD Simulator [版本 16.11.1035]<br/>(c) 2016 ZoneTwelve Corporation.  All rights reserved.<br/><br/>C:\><b id="type"></b></p></b>
+		</div>
+		<!-- 製造時間:忘記了反正是2016/11/11得昨天晚上
+			完成時間:反正現在還沒完成
+			作者:ZoneTwelve / BLOG:https://zonetwelvecodingsecurity.wordpress.com
+			GITHUB:https://github.com/ZoneTwelve
+			剩下就不知道說什麼了OwO
+		-->　	
+		<table><tr><td class="AutoNewline">自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行自動換行</td>
+		</tr>
+		</table>
+	</div>
+</body>
+</html>
