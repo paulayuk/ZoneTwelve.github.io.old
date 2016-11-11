@@ -125,7 +125,7 @@
 	}
 	window.onload=function(){type1();}
 	function quit(){window.close();
-	alert("關閉時出錯,可能該網站被限制執行該Script");}
+	setTimeout(function(){alert("關閉時出錯,可能該網站被限制執行該Script")},1000);}
 	function thisjk(){
 	document.getElementById("content").innerHTML="C:\><b id='type'></b><br/><h1>騙你的XD</h1>";
 	setTimeout(quit,1000);
