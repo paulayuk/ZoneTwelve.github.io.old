@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059) -->
+<html>
+	<head>
+    <title>ZoneTwelve</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="icon" href="logo.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/narrow-jumbotron.css" rel="stylesheet">
+	<!-- CSS_ADSBLOCK_START -->
+	<link rel="stylesheet" href="css/domainless-unknown.css" type="text/css">
+	<link rel="stylesheet" href="css/page_1_3m23oyfsfnawsy1gktd0kdpjkqm97e5ae62is4odkb8h69x0v.css" type="text/css">
+	<!-- CSS_ADSBLOCK_END -->
+	<script type="text/javascript">
+	function request(reqData){
+		var data = reqData+'Data'
+		console.log(document.getElementById(data).innerHTML.length)
+		if(document.getElementById(data).innerHTML.length==0){
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', reqData+'.html', true);
+			xhr.onprogress = function () {
+				document.getElementById(reqData+'Data').innerHTML=xhr.response;
+				document.getElementById('data').innerHTML=xhr.response;
+			};
+			xhr.send(null);
+		}else{
+			document.getElementById('data').innerHTML=document.getElementById(data).innerHTML;
+		}
+
+	}
+	</script>
+</head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills float-xs-right">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:request('about');">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="javascript:request('Contact')">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Project name</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="display-3">Jumbotron heading</h1>
+        <p class="lead">隨意</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up now</a></p>
+		<pre id="data"></pre>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+		<h1>主標題</h1>
+          <h4>副標題01</h4>
+		  <p>自定義內容01</p>
+		  <h4>副標題02</h4>
+		  <p>自定義內容02</p>
+		  <h4>副標題03</h4>
+		  <p>自定義內容03</p>
+        </div>
+      </div>
+	  <hr />
+      <div class="row marketing">
+        <div class="col-lg-6">
+		<h1>主標題</h1>
+          <h4>副標題01</h4>
+		  <p>自定義內容01</p>
+		  <h4>副標題02</h4>
+		  <p>自定義內容02</p>
+		  <h4>副標題03</h4>
+		  <p>自定義內容03</p>
+		</div>
+	  </div>
+
+      <footer class="footer">
+        <p>© Company 2016</p>
+      </footer>
+	<div style="display:none;" id="aboutData"></div>
+	<div style="display:none;" id="ContactData"></div>
+    </div> <!-- /container -->
+  </body>
+</html>
