@@ -20,7 +20,25 @@ function blueScreen(){
 	document.getElementById("base").style.display="none";
 	
 	//var WsShell = new ActiveXObject('WScript.Shell');WsShell.SendKeys('{F11}');
-	
+	//fullScreen
+	  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+		   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+		    if (document.documentElement.requestFullScreen) {  
+		      document.documentElement.requestFullScreen();  
+		    } else if (document.documentElement.mozRequestFullScreen) {  
+		      document.documentElement.mozRequestFullScreen();  
+		    } else if (document.documentElement.webkitRequestFullScreen) {  
+		      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+		    }  
+		  } else {  
+		    if (document.cancelFullScreen) {  
+		      document.cancelFullScreen();  
+		    } else if (document.mozCancelFullScreen) {  
+		      document.mozCancelFullScreen();  
+		    } else if (document.webkitCancelFullScreen) {  
+		      document.webkitCancelFullScreen();  
+		    }  
+		  } 
 	var windowHeight = document.getElementById("helloBlue").style.height;
 	var textHeight = document.getElementById("winbluetext").style.height;
 	setTimeout(backToNormal, 6000)
