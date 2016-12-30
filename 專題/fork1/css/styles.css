@@ -1,0 +1,9 @@
+body{
+	margin:auto;
+	text-align:center;
+}.effects{
+	border-radius:100px;
+	transition-duration: 0.6s;
+}.effects:hover{
+	border-radius:10px;
+}
