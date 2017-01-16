@@ -6,7 +6,7 @@ var xoff = 0.0;
 var xincrement = 0.01; 
 
 function setup() {
-  createCanvas(500, window.screen.height*0.5);
+  createCanvas(500, window.screen.height*0.8);
   background(0);
   noStroke();
 }
