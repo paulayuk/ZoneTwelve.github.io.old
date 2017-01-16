@@ -6,11 +6,11 @@ var xoff = 0.0;
 var xincrement = 0.01; 
 
 function setup() {
-  createCanvas(500, 800);
+  createCanvas(500, 1600);
   background(0);
   noStroke();
 }
-var move = 0,type=0,i=0,j=0,k=1,l=0.01;
+var move = 0,type=0,i=0,j=0,k=1,l=0.005;
 function draw() {
   fill(0, 10);
   rect(0,0,width,height);
