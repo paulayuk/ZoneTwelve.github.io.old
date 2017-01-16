@@ -10,7 +10,7 @@ function setup() {
   background(0);
   noStroke();
 }
-var move = 0,type=0,i=0,j=0,k=1,l=0.1;
+var move = 0,type=0,i=0,j=0,k=1,l=0.05;
 function draw() {
   fill(0, 10);
   rect(0,0,width,height);
