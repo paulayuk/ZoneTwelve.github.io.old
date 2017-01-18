@@ -16,10 +16,10 @@ function draw() {
   rect(0,0,width,height);
 
   if(j<height&type==0){
-	  j+=k
+	  j+=1.2*k
   }
   else{
-	  j-=k;
+	  j-=1.2*k;
   }
   console.log(j)
   if(i<height&&type == 0)
